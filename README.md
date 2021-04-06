@@ -34,6 +34,12 @@ create application in code push server
 appcenter apps create -d MyApp-Android -o Android -p React-Native
 appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 ```
+create deployment default for all staging and production for and app
+
+```
+code-push deployment add JoJoAndroid --default
+```
+
 and can get token of this app with environment,if you forgot can use this command line to get this information
 
 ```
