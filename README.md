@@ -92,3 +92,27 @@ code-push release-react CodePushExample(App name) android -d production
 ```
 
 check command line and + platform and status of application
+
+fix error
+1 - In the node_modules/react-native-code-push/CodePush.js file, change the import path from "code-push/script/acquisition-sdk" to "code-push/src/script acquisition-sdk".
+
+2 - In the node_modules/code-push/src/script/acquisition-sdk.ts file
+and change file follow below
+
+```
+export module Http {
+    export const Verb = {
+        GET: "GET",
+        HEAD: "HEAD",
+        POST: "POST",
+        PUT: "PUT",
+        DELETE: "DELETE",
+        TRACE: "TRACE",
+        OPTIONS: "OPTIONS",
+        CONNECT: "CONNECT",
+        PATCH: "PATCH"
+    }
+
+    type VerbProps = keyof typeof Verb;
+}
+```
