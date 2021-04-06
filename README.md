@@ -43,7 +43,7 @@ code-push deployment add JoJoAndroid --default
 and can get token of this app with environment,if you forgot can use this command line to get this information
 
 ```
-code-push deployment ls
+code-push deployment ls JoJoAndroid -k
 ```
 
 second, wrap application with code push libraries
@@ -88,7 +88,7 @@ change some style for app, and then push this change by this command line
 and then you can check for your app it is installed
 
 ```
-code-push release-react CodePushExample(App name) android -d production
+code-push release-react CodePushExample(App name) android -d Production
 ```
 
 check command line and + platform and status of application
