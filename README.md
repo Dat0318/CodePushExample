@@ -116,3 +116,14 @@ export module Http {
     type VerbProps = keyof typeof Verb;
 }
 ```
+
+with ios, i get an error:
+Error: Command 'codepush release-react -a name/app_name -d Staging' failed with exception "The "CFBundleShortVersionString" key in the "ios/app_name/Info.plist" file needs to specify a valid semver string, containing both a major and minor version (e.g. 1.3.2, 1.1)."
+
+
+and i fix it by change {{CFBundleShortVersionString}} by a number of current verion of app and it run follow [link](https://gitmemory.com/issue/microsoft/react-native-code-push/1665/554434822)
+
+and push it for ios
+```
+code-push release-react JoJoIos ios -d Staging
+```
